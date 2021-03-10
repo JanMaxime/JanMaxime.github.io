@@ -40,8 +40,9 @@ $.getJSON("JanMaxime.github.io/data.json", function(json) {
 
 function search() {
     var street_name = $("#street_name").val()
-
+    console.log(street_name);
     for (var i = 0; i < data.length; i++) {
+        console.log(data[i]["street"])
         if (data[i]["street"] == street_name) {
             L.marker(data[i]["position"]).addTo(map).on('click', function(e) {
                 map.setView(e.latlng);
