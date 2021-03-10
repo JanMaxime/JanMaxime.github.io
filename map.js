@@ -51,3 +51,5 @@ function custom_search() {
         }
     }
 }
+
+$("searchButton").addEventListener("click", custom_search, false)
