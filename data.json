@@ -1,16 +1,15 @@
-{
-    "1": {
+[{
         "street": "Grand Saint-Jean",
         "name": "Chappuis",
         "forname": "Jean",
         "job": "Vigneron",
         "position": [46.53, 6.63]
     },
-    "2": {
+    {
         "street": "Rue du Bourg",
         "name": "Demierre",
         "forname": "André",
         "job": "Marchand",
         "position": [46.532, 6.633]
     }
-}
+]
