@@ -31,21 +31,22 @@ function highlightMarker(position) {
     map.addLayer(greenMarker);
     on = true;
 }
-var marker = L.marker([46.53, 6.63]).addTo(map).on('click', function(e) {
-    map.setView(e.latlng);
-    console.log(on)
-    highlightMarker(e.latlng);
-});
 
-var marker2 = L.marker([46.531, 6.63]).addTo(map).on('click', function(e) {
-    map.setView(e.latlng);
-    highlightMarker(e.latlng);
-});
 
 var data;
 $.getJSON("JanMaxime.github.io/data.json", function(json) {
     data = json
-    for (var i = 0; i < data.length; i++) {
-        console.log(data[i]["street"]);
-    }
 });
+
+function search() {
+    var street_name = $("#street_name").val()
+
+    for (var i = 0; i < data.length; i++) {
+        if (data[i]["street"] == street_name) {
+            L.marker(data[i]["position"]).addTo(map).on('click', function(e) {
+                map.setView(e.latlng);
+                highlightMarker(e.latlng);
+            });
+        }
+    }
+}
