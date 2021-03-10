@@ -42,4 +42,8 @@ var marker2 = L.marker([46.531, 6.63]).addTo(map).on('click', function(e) {
     highlightMarker(e.latlng);
 });
 
-fetch("JanMaxime.github.io/data.json").then(data => console.log(data))
+fetch("JanMaxime.github.io/data.json").then(data => {
+    for (var i = 0; i < data.length; i++) {
+        console.log(data[i]);
+    }
+})
