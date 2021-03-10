@@ -38,7 +38,7 @@ $.getJSON("JanMaxime.github.io/data.json", function(json) {
     data = json
 });
 
-function search() {
+function custom_search() {
     var street_name = $("#street_name").val()
     console.log(street_name);
     for (var i = 0; i < data.length; i++) {
