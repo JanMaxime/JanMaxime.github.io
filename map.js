@@ -42,6 +42,4 @@ var marker2 = L.marker([46.531, 6.63]).addTo(map).on('click', function(e) {
     highlightMarker(e.latlng);
 });
 
-$.getJSON("data.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
-});
+fetch("JanMaxime.github.io/data.json").then(data => console.log(data))
