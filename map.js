@@ -32,6 +32,13 @@ function highlightMarker(position) {
     on = true;
 }
 
+function fillSelectedFields(street, forname, name, job) {
+    document.getElementById("selected_street").innerHTML = street;
+    document.getElementById("selected_forname").innerHTML = forname;
+    document.getElementById("selected_name").innerHTML = name;
+    document.getElementById("selected_job").innerHTML = job;
+}
+
 
 var data;
 $.getJSON("JanMaxime.github.io/data.json", function(json) {
@@ -47,6 +54,7 @@ function custom_search() {
             L.marker(data[i]["position"]).addTo(map).on('click', function(e) {
                 map.setView(e.latlng);
                 highlightMarker(e.latlng);
+                fillSelectedFields(data[i]["street"], data[i]["forname"], data[i]["name"], data[i]["job"]);
             });
         }
     }
