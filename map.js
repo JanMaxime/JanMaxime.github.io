@@ -52,4 +52,4 @@ function custom_search() {
     }
 }
 
-$("searchButton").addEventListener("click", custom_search)
+$("searchButton").onclick = function() { alert("HELLO") }
