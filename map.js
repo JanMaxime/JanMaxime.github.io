@@ -45,16 +45,25 @@ $.getJSON("JanMaxime.github.io/data.json", function(json) {
     data = json
 });
 
+var job;
+var street;
+var forname;
+var name_;
+
 function custom_search() {
     var street_name = $("#street_name").val()
     console.log(street_name);
     for (var i = 0; i < data.length; i++) {
         console.log(data[i]["street"])
         if (data[i]["street"] == street_name) {
+            job = data[i]["job"]
+            street = data[i]["street"]
+            name_ = data[i]["name"]
+            forname = data[i]["forname"]
             L.marker(data[i]["position"]).addTo(map).on('click', function(e) {
                 map.setView(e.latlng);
                 highlightMarker(e.latlng);
-                fillSelectedFields(data[i]["street"], data[i]["forname"], data[i]["name"], data[i]["job"]);
+                fillSelectedFields(street, forname, name_, job);
             });
         }
     }
