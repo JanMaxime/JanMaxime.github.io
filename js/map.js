@@ -53,12 +53,12 @@ function fillSelectedFields(latlng) {
 
 
 var data;
-$.getJSON("https://JanMaxime.github.io/data.json", function(json) {
+$.getJSON("https://JanMaxime.github.io/js/data.json", function(json) {
     data = json
 
 });
 
-$.getJSON("https://JanMaxime.github.io/polygon.json", function(json) {
+$.getJSON("https://JanMaxime.github.io/js/polygon.json", function(json) {
     var polygones = json;
 
     for (var i = 0; i < polygones.length; i++) {
