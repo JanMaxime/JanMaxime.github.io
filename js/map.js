@@ -1,4 +1,4 @@
-var map = L.map('map').setView([46.53, 6.63], 14);
+var map = L.map('map').setView([46.522, 6.635], 16);
 var publicToken = 'pk.eyJ1IjoidG9rb25vbW8iLCJhIjoiY2toaTY1M3Y0MG9qNDJzcDlnbzJoZTI4ZyJ9.FwqCfi82ZxqeitStLwtkWA';
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + publicToken, {
