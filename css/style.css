@@ -1,8 +1,0 @@
-#map {
-    height: 400px;
-}
-
-.leaflet-marker-icon.selectedMarker {
-    border: 1px solid gold;
-    color: brown;
-}
