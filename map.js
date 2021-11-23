@@ -107,6 +107,7 @@ function onEachFeature(feature, layer) {
 
             if(DL2){
                 //Do nothing for now
+                
             }
 
             if(DL3){
