@@ -45,6 +45,7 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="modal.css" />
 
     <!-- Leaflet CSS -->
     <link
@@ -140,18 +141,9 @@
       <section id="counts" class="counts section-bg">
         <div class="container">
           <div class="row">
-            <div class="col-12 mt-2">
+            <div class="col-8 mt-2">
               <div id="map"></div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Counts Section -->
-
-      <!-- ======= About Video Section ======= -->
-      <section id="about-video" class="about-video">
-        <div class="container">
-          <div class="row">
             <div class="col-4 mt-2">
               <div class="selection hidden">
                 <h2 id="parcelle_title"></h2>
@@ -168,6 +160,13 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- End Counts Section -->
+
+      <!-- ======= About Video Section ======= -->
+      <section id="about-video" class="about-video">
+        <div class="container">
           <div class="row">
             <div class="col-12 mt-2">
               <div class="selection hidden">
@@ -186,13 +185,15 @@
               </div>
             </div>
             <div class="row">
-                <div class="col-12 mt-2">
-                    <div class="selection hidden">
-                        <h2 id="parcelle_title">Détermination topographique et renseignements divers</h2>
-                        <div id="topo_data"></div>
-                    </div>
+              <div class="col-12 mt-2">
+                <div class="selection hidden">
+                  <h2 id="parcelle_title">
+                    Détermination topographique et renseignements divers
+                  </h2>
+                  <div id="topo_data"></div>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
@@ -216,6 +217,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" />
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
     <!-- End Footer -->
 
     <div id="preloader"></div>

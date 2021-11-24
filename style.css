@@ -4,7 +4,7 @@
 
 .leaflet-marker-icon.selectedMarker {
     border: 1px solid gold;
-    color: brown;
+    color: #BA183E;
 }
 
 .ui-slider-handle{
@@ -13,7 +13,7 @@
 
 .ui-slider-horizontal {
     height: 1.3em;
-    color:#9e2c18
+    color:#BA183E
 }
 
 .ui-slider-range{
