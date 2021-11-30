@@ -103,28 +103,42 @@ function onEachFeature(feature, layer) {
       if(wikidata){
           console.log(wikidata)
           $("#wikidata").attr("href", "https://www.wikidata.org/wiki/"+wikidata)
+          $("#wikidata").show()
+      }
+      else{
+        $("#wikidata").attr("href", "")
+        $("#wikidata").hide()
       }
 
       if (DL1) {
         owner_table_html = "";
         for (var i = 0; i < DL1.length; i++) {
+        
+            var name = DL1[i]["name"]
+            if(!name){
+                name = "avec " + DL1[i]["ref_letter"]+ DL1[i]["ref_number"]
+            }
           owner_table_html +=
             "<tr> <td>" +
             DL1[i]["start_year"] +
             " - " +
             DL1[i]["end_year"] +
             "</td><td>" +
-            DL1[i]["name"] +
+            name +
             "</td></tr>";
         }
         $("#owner_table").html(owner_table_html);
+      }
+
+      else{
+        $("#owner_table").html("");
       }
 
       if (DL2) {
         //Do nothing for now
       }
 
-      dummy_list = ["assets/img/Torr-III-32.jpg","assets/img/ATN-15-17.jpg"];
+      dummy_list = ["assets/img/CH-AEV-24-79_001.jpg","assets/img/CH-AEV-24-81_001.jpg", "assets/img/CH-AEV-24-83_001.jpg"];
       if (DL3) {
         additional_data_tables = "";
         for (var i = 0; i < DL3.length; i++) {
@@ -136,8 +150,8 @@ function onEachFeature(feature, layer) {
             "." +
             date.getFullYear();
           additional_data_tables +=
-            '<tr><td><a href="#about-video" class="cotes" alt="' +
-            dummy_list[i % dummy_list.length] +
+            '<tr><td><a href="#additional-data" class="cotes" alt="' +
+            dummy_list[i % dummy_list.length].slice(11, -4) +
             '" src="' +
             dummy_list[i % dummy_list.length] +
             '">' +
@@ -152,9 +166,15 @@ function onEachFeature(feature, layer) {
         }
         $("#additional_data_tables").html(additional_data_tables);
       }
+      else{
+        $("#additional_data_tables").html("");
+      }
 
       if (DL4) {
         $("#topo_data").html(DL4["text"]);
+      }
+      else{
+        $("#topo_data").html("");
       }
 
       var cotes = document.getElementsByClassName("cotes");
