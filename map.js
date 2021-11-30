@@ -98,6 +98,12 @@ function onEachFeature(feature, layer) {
       DL2 = feature.properties.dubuis_lugon_II;
       DL3 = feature.properties.dubuis_lugon_III;
       DL4 = feature.properties.dubuis_lugon_IV;
+      wikidata = feature.properties.Wikidata;
+
+      if(wikidata){
+          console.log(wikidata)
+          $("#wikidata").attr("href", "https://www.wikidata.org/wiki/"+wikidata)
+      }
 
       if (DL1) {
         owner_table_html = "";
@@ -123,7 +129,6 @@ function onEachFeature(feature, layer) {
         additional_data_tables = "";
         for (var i = 0; i < DL3.length; i++) {
           date = new Date(DL3[i]["date"]);
-          console.log(DL3[i]["date"]);
           date_text =
             date.getDate() +
             "." +
@@ -145,7 +150,6 @@ function onEachFeature(feature, layer) {
             DL3[i]["text"] +
             "</td></tr>";
         }
-        console.log(additional_data_tables);
         $("#additional_data_tables").html(additional_data_tables);
       }
 
@@ -155,7 +159,6 @@ function onEachFeature(feature, layer) {
 
       var cotes = document.getElementsByClassName("cotes");
       for (var i = 0; i < cotes.length; i++) {
-          console.log()
         cotes[i].onclick = function () {
           modal.style.display = "block";
           modalImg.src = this.getAttribute("src");
@@ -255,6 +258,5 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-  console.log("CLOSE")
   $("#map").toggle()
 }

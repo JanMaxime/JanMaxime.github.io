@@ -76,8 +76,10 @@
             <li>
               <a class="nav-link scrollto active" href="#hero">Accueil</a>
             </li>
-            <li><a class="nav-link scrollto" href="#about">Recherche</a></li>
-            <li><a class="nav-link scrollto" href="#counts">Carte</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#recherche">Recherche</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#carte">Carte</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -100,7 +102,7 @@
           </div>
         </div>
         <div class="text-center">
-          <a href="#counts" class="btn-get-started scrollto"
+          <a href="#carte" class="btn-get-started scrollto"
             >Explorer la carte</a
           >
         </div>
@@ -109,8 +111,8 @@
     <!-- End Hero -->
 
     <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
+      <!-- ======= recherche Section ======= -->
+      <section id="recherche" class="recherche">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Recherche</h2>
@@ -135,10 +137,10 @@
           </div>
         </div>
       </section>
-      <!-- End About Section -->
+      <!-- End recherche Section -->
 
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts section-bg">
+      <!-- ======= carte Section ======= -->
+      <section id="carte" class="carte section-bg">
         <div class="container">
           <div class="row">
             <div class="col-8 mt-2">
@@ -147,6 +149,9 @@
             <div class="col-4 mt-2">
               <div class="selection hidden">
                 <h2 id="parcelle_title"></h2>
+                <a id="wikidata" target="_blank">
+                  <img src="assets/img/wikidata-icon.png" style="width: 40px" />
+                </a>
                 <hr class="mt-2 mb-3" />
                 <table class="table table-striped">
                   <thead>
@@ -162,10 +167,10 @@
           </div>
         </div>
       </section>
-      <!-- End Counts Section -->
+      <!-- End carte Section -->
 
-      <!-- ======= About Video Section ======= -->
-      <section id="about-video" class="about-video">
+      <!-- ======= recherche data Section ======= -->
+      <section id="additional-data" class="additional-data">
         <div class="container">
           <div class="row">
             <div class="col-12 mt-2">
@@ -263,7 +268,6 @@
       integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
       crossorigin="anonymous"
     ></script>
-
 
     <!-- Own scripts-->
     <script src="data.js"></script>
